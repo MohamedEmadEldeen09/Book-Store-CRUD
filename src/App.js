@@ -11,8 +11,8 @@ function App() {
     <BrowserRouter>
      <Header log={log} />    
      <Routes>
-      <Route path='/' element={<Control books={books} log={log}/>}></Route>
-      <Route path="/read/:bookId_param" element={<ReadPage books={books} />}></Route> 
+      <Route path='/Book-Store-CRUD' element={<Control books={books} log={log}/>}></Route>
+      <Route path="/Book-Store-CRUD/read/:bookId_param" element={<ReadPage books={books} />}></Route> 
      </Routes>  
     </BrowserRouter>     
   );
@@ -29,7 +29,7 @@ function Header(props){
       <div className='row'>
         <div className="col-lg-4 col-md-4 col-sm-4">
           <div className='logo text-white'>
-             <Link to='/' className='btn text-white'><p><span className='h2 fw-bold'>Book</span> store</p></Link>
+             <Link to='/Book-Store-CRUD' className='btn text-white'><p><span className='h2 fw-bold'>Book</span> store</p></Link>
           </div>
         </div>
         <div className="col-lg-5 col-md-4 col-sm-4">
@@ -195,7 +195,7 @@ let BookList = (props)=>{
                 <div className="btn-group-sm text-end" role="group" aria-label="Basic mixed styles example">
                   <button type="button" className='btn btn-danger' onClick={handleClick} data-bs-dismiss="alert" id={book.id} disabled={props.log && "disabled"}>Delete</button>
                   <a href='#form'><button type="button" className="btn btn-warning" onClick={handleEdit} disabled={props.log && "disabled"} id={book.id}>Edit</button></a>
-                  <Link to={'/read/'+book.id} type="button" className="btn btn-success" id={book.id}>Read</Link>
+                  <Link to={'/Book-Store-CRUD/read/'+book.id} type="button" className="btn btn-success" id={book.id}>Read</Link>
                 </div>
               </div>       
               </div>                
