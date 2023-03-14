@@ -229,7 +229,7 @@ let BookList = (props)=>{
     <div className='container mt-3 border-top pt-3'>
       {load && <p className='display-6 fw-bold text-info'>Loading....</p>}
       {props.books == null && <p className='display-6 fw-bold text-info'>There is no books</p>}
-      {items == [] ? <p className='display-6 fw-bold text-info'>No Result</p> : items}     
+      {items}   
     </div>
   )
 }

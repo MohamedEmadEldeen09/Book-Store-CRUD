@@ -62,7 +62,7 @@ export const deleteBook = createAsyncThunk('book/deletebooks' , async (id)=>{
             return null
          }  
         const data = await get.json()
-        return date
+        return data
     } catch (error) {
        console.log(Error('Error'))
        return null          
